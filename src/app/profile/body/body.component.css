@@ -1,0 +1,44 @@
+.bg {
+    background: rgb(255, 255, 255)
+}
+.wordCount{
+  width: 50%;
+  height: 55%;
+}
+.mat-list .mat-list-item .mat-line, .mat-nav-list .mat-list-item .mat-line, .mat-selection-list .mat-list-item .mat-line{
+  white-space: pre-line;
+  
+}
+.secondary-light-theme .mat-card{
+  background: #f7f7f7
+  
+}
+.sideBar{
+  display: block;
+}
+
+.mat-list-item{
+  padding-bottom: 35px;
+  padding-top: 10px;
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 1024px)  { /* STYLES GO HERE */
+
+  .skills{
+    max-width: 100%;
+  }
+  .mat-list-item{
+    padding-bottom: 75px;
+    padding-top: 10px;
+  }
+.wordCount{
+  display: none;
+}
+
+  .leftSide .mat-card-content{
+    display: none;
+  }
+}
+

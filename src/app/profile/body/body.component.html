@@ -1,0 +1,61 @@
+<div class="bg" fxLayout="column">
+
+  <div fxLayout="row">
+    <mat-card-content class="jobSkills" fxFlex="100" style="margin-top: 15px"fxLayout="column">
+
+      <mat-card-content *ngFor="let mem of workplace.companies" class="secondary-light-theme">
+        <mat-card class="secondary-light-theme">
+          <mat-card-header>
+            <img mat-card-avatar [src]=mem.iconSrc>
+            <mat-card-title>
+              <h1 class="mat-h1">{{ mem.name }}</h1>
+            </mat-card-title>
+            <mat-card-subtitle>
+              <h2 class="mat-h2">{{ mem.role }}</h2>
+            </mat-card-subtitle>
+          </mat-card-header>
+
+          <mat-divider></mat-divider>
+
+
+          <mat-card-content>
+            <mat-list fxLayout="column">
+              <h3 mat-subheader>Details</h3>
+              <mat-list-item fxLayoutAlign="space-between" *ngFor="let skill of mem.skills">
+                <mat-icon mat-list-icon>done</mat-icon>
+                <h4 mat-line>{{skill.item}}</h4>
+              </mat-list-item>
+            </mat-list>
+          </mat-card-content>
+
+        </mat-card>
+
+      </mat-card-content>
+    </mat-card-content>
+    <mat-card-content class="leftSide" fxFlex="40" fxLayoutAlign="center center" fxLayout="column">
+      <img class="wordCount" src="../../../assets/images/word-cloud.png">
+      <mat-divider></mat-divider>
+      <mat-card-content class="sideBar"  fxLayout="row" fxLayoutAlign="center center">
+          <mat-list>
+              <mat-list-item *ngFor="let skill of qualifications.skills">
+                <mat-icon mat-list-icon>done</mat-icon>
+                <h4 mat-line>{{skill.item}}</h4>
+              </mat-list-item>
+            </mat-list>
+          
+      </mat-card-content>
+      
+    </mat-card-content>
+
+  </div>
+  
+</div>
+
+<!-- <mat-card-content *ngFor="let mem of members.members"> // ID
+  <mat-card fxFlex="53" class="side" fxLayout="row">
+    {{mem.id}} {{mem.name}}
+    <mat-card-content *ngFor="let skill of mem.skills">
+      {{skill.id}}
+    </mat-card-content>
+  </mat-card>
+</mat-card-content> -->

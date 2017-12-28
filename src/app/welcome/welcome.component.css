@@ -1,0 +1,103 @@
+.img-circular{
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .mat-spinner{
+      z-index: 999;
+  }
+  .img-circular img {
+    width: auto;
+    height: 100%;
+    margin-left: -50px;
+  }
+  .mat-card{
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/../assets/images/toronto.jpg');
+      height: -webkit-fill-available;
+      background-position-x: center;
+      left:0;
+      right:0;
+      position: fixed;
+      background-position: 0px 0px;
+      background-repeat: repeat-x;
+      animation: animatedBackground 20s linear infinite;
+      
+    }
+
+    @keyframes animatedBackground {
+        from { background-position: 0 0; }
+        to { background-position: 100% 0; }
+    }
+
+  .dp{
+      filter: grayscale(100%);
+  }
+  .role{
+    margin-bottom: 50px;
+  }
+  .mat-display-3{
+      font-family: Oswald;
+  }
+  .mat-card-footer{
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 50px 100px 50px 100px;
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+    left: 10px;
+    right: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+    word-spacing: 5px;
+    line-height: 20px;
+  }
+  .bg{
+      z-index: 999;
+      position: relative;
+
+  }
+  .mat-spinner{
+        bottom: -200px;
+        z-index: 9999;
+    }
+  .primary-dark-theme .mat-raised-button.mat-primary{
+     background: rgba(0, 0, 0, 0.5);
+ }
+ @media only screen 
+ and (min-device-width : 320px) 
+ and (max-device-width : 1024px) {
+    .img-circular{
+
+        width: 160px;
+        height: 160px;
+
+      }
+      .mat-spinner{
+        bottom: -180px;
+    }
+      .img-circular img {
+        width: auto;
+        height: 100%;
+        margin-left: -38px;
+      }
+    .mat-card-footer{
+        
+        padding: 20px 30px 20px 30px;
+        font-size: 10px;
+        line-height: 10px;
+        /* position: fixed; */
+        /* bottom: 10px;
+        left: 0;
+        right: 0; */
+      }
+      .mat-card{
+            animation: animatedBackground 10s linear infinite;
+      }
+    .mat-display-3, .mat-typography .mat-display-3{
+        font: 400 36px/36px Roboto, "Helvetica Neue", sans-serif
+    }
+ }

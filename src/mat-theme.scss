@@ -1,0 +1,125 @@
+// Import all the tools needed to customize the theme and extract parts of it
+@import '~@angular/material/theming';
+@import 'themes/primary-theme.scss';
+@import 'themes/secondary-theme.scss';
+
+@include mat-core();
+
+
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$primary: mat-palette($mat-blue);
+$accent:  mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$warn:    mat-palette($mat-blue);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$app-theme: mat-primary-dark-theme($primary, $accent, $warn);
+
+@mixin custom-theme($theme) {
+	@include mat-card-theme($theme);
+}
+
+.primary-dark-theme {
+	$alternate-primary: mat-palette($mat-light-blue);
+	$alternate-accent:  mat-palette($mat-yellow, 400);
+  
+	$alternate-theme: mat-primary-dark-theme($alternate-primary, $alternate-accent);
+  
+	@include angular-material-theme($alternate-theme);
+	.mat-card{
+		height: 120px;
+		padding: 10px;
+	}
+
+}
+
+.primary-light-theme {
+	$alternate-primary: mat-palette($mat-red);
+	$alternate-accent:  mat-palette($mat-yellow, 400);
+  
+	$alternate-theme: mat-primary-light-theme($alternate-primary, $alternate-accent);
+	
+	.mat-card-content{
+		margin: 2px;
+		padding-top: 13px;
+		padding-bottom: 7px;
+		padding-left: 30px;
+		padding-right: 15px;
+		
+		padding-inline-start: 15px;
+		padding-inline-end: 15px;
+
+	}
+	.mat-card:not([class*=mat-elevation-z]){
+		// box-shadow: none;
+	}
+	
+	@include angular-material-theme($alternate-theme);
+	
+}
+
+.secondary-dark-theme {
+	$alternate-primary: mat-palette($mat-light-blue);
+	$alternate-accent:  mat-palette($mat-yellow, 400);
+  
+	$alternate-theme: mat-secondary-dark-theme($alternate-primary, $alternate-accent);
+	.mat-card-content{
+		margin:0;
+
+	}
+    .mat-card{
+		box-shadow:0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+	}
+	@include angular-material-theme($alternate-theme);
+}
+
+.secondary-light-theme {
+	$alternate-primary: mat-palette($mat-light-blue);
+	$alternate-accent:  mat-palette($mat-yellow, 400);
+  
+	$alternate-theme: mat-secondary-light-theme($alternate-primary, $alternate-accent);
+	.mat-card{
+		height: 150px;
+		margin: 10px;
+		transition: height 0.7s ease;
+		overflow: hidden;
+		box-shadow:0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+	}
+	
+	.mat-card:hover{
+		height: 350px;
+		-webkit-transition: height 0.7s ease;
+		-moz-transition: height 1s ease;
+		-o-transition: height 1s ease-out;
+		transition: height 0.7s ease;
+		.mat-card-content{
+		
+			.mat-card-header{
+				position: fixed;
+				height: 100%;
+				// background: white;
+			}
+			.mat-list{
+
+				overflow: scroll;
+				height: 230px;
+				transition: height 0.7s ease;
+			}
+		}
+	}
+
+	.mat-card{
+		box-shadow:0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+	}
+	@include angular-material-theme($alternate-theme);
+}
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+// @include angular-material-theme($candy-app-theme);
+@include custom-theme($app-theme);
