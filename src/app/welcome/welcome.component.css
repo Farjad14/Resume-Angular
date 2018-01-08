@@ -67,6 +67,17 @@
   .primary-dark-theme .mat-raised-button.mat-primary{
      background: rgba(0, 0, 0, 0.5);
  }
+ svg{
+    width: 200px;
+    height: 200px;
+}
+ .sampleClass {float:center;}
+ @media only screen  
+ and (min-device-width : 320px) 
+ and (max-device-width : 1024px) {
+     .sampleClass {float:none;}
+     
+ }
  @media only screen 
  and (min-device-width : 320px) 
  and (max-device-width : 1024px) {
@@ -76,14 +87,15 @@
         height: 160px;
 
       }
-      .mat-spinner{
+      /* .mat-spinner{
         bottom: -180px;
-    }
+    } */
       .img-circular img {
         width: auto;
         height: 100%;
         margin-left: -38px;
       }
+      
     .mat-card-footer{
         
         padding: 20px 30px 20px 30px;

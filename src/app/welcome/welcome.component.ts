@@ -18,6 +18,7 @@ export class WelcomeComponent implements OnInit {
 
   constructor(private router: Router) {}
   private active: false;
+  private mobile: false;
 
   ngOnInit() {
   }
@@ -25,8 +26,8 @@ export class WelcomeComponent implements OnInit {
     this.active = true;
     $('mat-card-content').css('margin-bottom', '200px');
     setTimeout((router: Router) => {
-      this.router.navigate(['/profile']);
-  }, 3000); 
+      //this.router.navigate(['/profile']);
+  }, 300000); 
   };
 }
 
