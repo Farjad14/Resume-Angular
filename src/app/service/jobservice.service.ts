@@ -1,27 +1,27 @@
 
-import { Injectable } from '@angular/core';
-import { Job } from '../model/job';
-import { skill } from '../model/skill'
-import { skills } from '../model/skills'
+// import { Injectable } from '@angular/core';
+// // import { Job } from '../model/job';
+// // import { skill } from '../model/skill'
+// // import { skills } from '../model/skills'
 
-@Injectable()
-export class JobserviceService {
+// @Injectable()
+// export class JobserviceService {
 
-  // get a single agent from mock data
-  getAgent(): Promise<Job> {
-    return Promise.resolve(skill);
-  }  
+//   // get a single agent from mock data
+//   getAgent(): Promise<Job> {
+//     return Promise.resolve(skill);
+//   }  
 
-  // Get agent by array ID
-  getAgentById(jobId: number): Promise<Job> {
+//   // Get agent by array ID
+//   getAgentById(jobId: number): Promise<Job> {
 
-    return Promise.resolve(skills[jobId]);
-  }
+//     return Promise.resolve(skills[jobId]);
+//   }
 
-  // Get the length of the mock agent array
-  getMaxAgentID() {
-    return skills.length;
-  }
+//   // Get the length of the mock agent array
+//   getMaxAgentID() {
+//     return skills.length;
+//   }
   
 
-}
+// }

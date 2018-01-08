@@ -1,14 +1,14 @@
-// export class Job {
+export class Job {
     
-//     name: string;
-//     title: string;
-//     jobImageUrl: string;
-//     skills: Skill[];
-// }
+    name: string;
+    title: string;
+    jobImageUrl: string;
+    skills: Skill[];
+}
 
-// export class Skill {
-//     view: string;
-// }
+export class Skill {
+    view: string;
+}
 
 export class Workplace {
     
