@@ -641,11 +641,12 @@ var WelcomeComponent = (function () {
     function WelcomeComponent(router) {
         this.router = router;
         this.btnClick = function () {
+            var _this = this;
             this.active = true;
             $('mat-card-content').css('margin-bottom', '200px');
             setTimeout(function (router) {
-                //this.router.navigate(['/profile']);
-            }, 300000);
+                _this.router.navigate(['/profile']);
+            }, 3000);
         };
     }
     WelcomeComponent.prototype.ngOnInit = function () {
